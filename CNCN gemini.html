@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liên — Bandana Họa Tiết Hoa Sen</title>
+<meta name="description" content="Liên — bandana họa tiết hoa sen kết hợp giữa truyền thống và phong cách hiện đại.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--green: #6f906b;
+--pink: #feb6d2;
+--cream: #fde8b4;
+--bg: #fffdf9;
+--muted: #6b6b6b;
+--radius: 14px;
+--maxw: 1200px;
+--glass: rgba(255,255,255,0.6);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;
+font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+background: linear-gradient(180deg,var(--bg), #fff);
+color:#222;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+line-height:1.45;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+/* Header */
+header{position:sticky;top:0;backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));z-index:40;border-bottom:1px solid rgba(111,144,107,0.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:52px;height:52px}
+.brand{font-family:'Playfair Display', serif;color:var(--green);font-size:20px;font-weight:700}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-weight:600}
+.cta{background:var(--pink);padding:8px 14px;border-radius:10px;color:#5b2b3a;text-decoration:none;font-weight:700}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 460px;gap:28px;align-items:center;padding:52px 0}
+.hero .eyebrow{color:var(--green);font-weight:700;letter-spacing:1px}
+.hero h1{font-family:'Playfair Display', serif;font-size:44px;margin:8px 0 12px;color:var(--green)}
+.hero p.lead{color:#444;margin:0 0 18px}
+.buttons{display:flex;gap:12px}
+.btn-primary{background:var(--green);color:#fff;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;border:none;cursor:pointer} /* Added border:none, cursor:pointer */
+.btn-ghost{background:transparent;border:2px solid var(--pink);padding:10px 16px;border-radius:12px;color:var(--pink);font-weight:700;text-decoration:none} /* Added text-decoration:none */
+
+/* Mock product art */
+.mock{
+background: linear-gradient(135deg,var(--cream),#fff);
+border-radius:22px;padding:18px;box-shadow:0 8px 30px rgba(111,144,107,0.08);display:flex;align-items:center;justify-content:center;min-height:360px
+}
+.bandana-mock{
+width:320px;height:320px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:var(--green);font-family:'Playfair Display',serif;letter-spacing:1px;background:radial-gradient(circle at 35% 30%, rgba(254,182,210,0.25), transparent 20%), repeating-linear-gradient(45deg, rgba(111,144,107,0.04) 0 6px, transparent 6px 12px);border:6px solid rgba(111,144,107,0.06);
+overflow:hidden; /* Added for image placement */
+}
+.bandana-mock img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: opacity 0.3s ease-in-out;
+}
+
+/* Sections */
+section{padding:42px 0}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.9));border-radius:18px;padding:18px}
+
+/* Customizer Grid */
+.product-customizer-grid {
+display: grid;
+grid-template-columns: 1fr 360px; /* Layout 1:1.5 image:options */
+gap: 36px;
+padding: 40px 0;
+}
+.product-display {
+background-color: var(--cream); /* Default background color */
+border-radius: var(--radius);
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 400px;
+padding: 20px;
+}
+.custom-options h2 {
+font-family: 'Playfair Display', serif;
+color: var(--green);
+margin: 0 0 16px;
+}
+.option-group h3 {
+font-size: 20px;
+font-family: 'Playfair Display', serif;
+color: #444;
+margin: 24px 0 12px;
+}
+.option-group:first-child h3 {
+margin-top: 0;
+}
+
+/* Selector Buttons */
+.selector-buttons {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+}
+.selector-btn {
+padding: 10px 18px;
+border-radius: 8px;
+background: var(--cream);
+border: 2px solid transparent;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-align: center;
+}
+.selector-btn:hover {
+background: #fdf2d0;
+}
+.selector-btn.active {
+border: 2px solid var(--green);
+background: #fff;
+box-shadow: 0 4px 10px rgba(111,144,107,0.1);
+}
+.selector-btn.color-option {
+width: 60px;
+height: 60px;
+padding: 0;
+display: grid;
+place-items: center;
+}
+/* Quantity Selector */
+.quantity-selector {
+display: flex;
+gap: 0;
+margin-top: 15px;
+max-width: 180px;
+}
+.qty-btn {
+padding: 12px 18px;
+border: 1px solid rgba(111,144,107,0.12);
+background: #fff;
+cursor: pointer;
+font-weight: 700;
+user-select: none;
+transition: background 0.1s;
+}
+.qty-btn:hover {
+background: #f0f0f0;
+}
+#quantity-input {
+text-align: center;
+padding: 12px 0;
+width: 60px;
+border: 1px solid rgba(111,144,107,0.12);
+border-left: none;
+border-right: none;
+font-weight: 600;
+color: #222;
+background: var(--cream);
+}
+.qty-btn:first-child {
+border-radius: 8px 0 0 8px;
+}
+.qty-btn:last-child {
+border-radius: 0 8px 8px 0;
+}
+
+/* Buy Button */
+#buy-now-btn {
+margin-top: 25px;
+padding: 15px 30px;
+font-size: 18px;
+width: 100%;
+max-width: 300px;
+}
+
+/* Checkout Form */
+#checkout-form-container {
+margin-top: 30px;
+padding: 20px;
+border-radius: 14px;
+background: linear-gradient(180deg, rgba(254,182,210,0.1), rgba(253,232,180,0.1));
+border: 1px solid rgba(254,182,210,0.3);
+display: none; /* Hidden by default */
+}
+#checkout-form-container h4 {
+color: var(--pink);
+margin-top: 0;
+}
+.checkout-input {
+width: 100%;
+padding: 12px;
+margin-bottom: 15px;
+border-radius: 8px;
+border: 1px solid rgba(111,144,107,0.12);
+}
+.checkout-btn {
+width: 100%;
+padding: 12px;
+margin-top: 10px;
+}
+
+/* Remaining styles (Story, Founders, Footer) unchanged */
+
+/* Story */
+.story{display:grid;grid-template-columns:1fr 360px;gap:22px;align-items:center}
+.story h2{font-family:'Playfair Display',serif;color:var(--green);margin:0 0 12px}
+.story p{color:#333}
+
+/* Founder */
+.founders{display:flex;gap:16px;flex-wrap:wrap}
+.founder{flex:1 1 160px;background:var(--glass);border-radius:12px;padding:14px;text-align:center}
+.founder h4{margin:8px 0 6px;color:var(--green)}
+.founder p{margin:0;color:#666}
+
+/* Product grid */
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.product{border-radius:14px;padding:14px;background:linear-gradient(180deg,#fff, rgba(253,232,180,0.4));box-shadow:0 6px 20px rgba(111,144,107,0.04)}
+.product .thumb{height:180px;border-radius:12px;background-image:linear-gradient(120deg, rgba(254,182,210,0.12), rgba(111,144,107,0.06));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;color:var(--green)}
+.product h3{margin:12px 0 6px;font-size:18px}
+.product p{margin:0;color:#666}
+.price{font-weight:700;margin-top:8px}
+.product .action{margin-top:10px;display:flex;gap:8px}
+
+/* Footer */
+footer{padding:28px 0;border-top:1px solid rgba(111,144,107,0.06);margin-top:28px}
+.foot-grid{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+.social a{margin-right:10px;text-decoration:none;color:var(--green);font-weight:700}
+
+/* Responsive */
+@media (max-width:900px){
+.hero{grid-template-columns:1fr;}
+.story{grid-template-columns:1fr}
+.logo svg{width:44px;height:44px}
+.hero h1{font-size:32px}
+.product-customizer-grid {
+grid-template-columns: 1fr;
+}
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<div class="logo">
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<g fill="none" fill-rule="evenodd">
+<circle cx="32" cy="32" r="30" fill="var(--cream)"/>
+<path d="M32 16s6 5 8 12c0 0-6-2-8-2s-7 2-8 2c2-7 8-12 8-12z" fill="var(--pink)"/>
+<path d="M32 20s4 3 5 8c0 0-4-1-5-1s-4 1-5 1c1-5 5-8 5-8z" fill="var(--green)"/>
+<circle cx="32" cy="36" r="2.2" fill="#fff"/>
+</g>
+</svg>
+<div>
+<div class="brand">Liên</div>
+<div style="font-size:12px;color:var(--muted)">Bandana Họa Tiết Hoa Sen</div>
+</div>
+</div>
+
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="#collections">Bộ sưu tập</a></li>
+<li><a href="#story">Câu chuyện</a></li>
+<li><a href="#founders">Nhóm</a></li>
+<li><a href="#contact">Liên hệ</a></li>
+<li><a class="cta" href="#product-customizer">Mua ngay</a></li> </ul>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<section class="hero" aria-labelledby="hero-title">
+<div>
+<div class="eyebrow">Sản phẩm thủ công • Tinh hoa Việt</div>
+<h1 id="hero-title">Bandana họa tiết hoa sen — kể câu chuyện của bạn</h1>
+<p class="lead">Kết hợp truyền thống và hiện đại mỗi chiếc bandana của Liên được thiết kế tỉ mỉ để mang vẻ đẹp văn hóa Việt vào phong cách hàng ngày.</p>
+<div class="buttons">
+<a class="btn-primary" href="#collections">Khám phá bộ sưu tập</a>
+<a class="btn-ghost" href="#story">Câu chuyện thương hiệu</a>
+</div>
+
+<div style="margin-top:22px;color:#666"></div>
+</div>
+
+<div class="mock" aria-hidden="true">
+<div class="bandana-mock" >
+<img src="bandana.png" alt="Bandana hoa sen" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+</div>
+</div>
+</section>
+
+<section id="product-customizer">
+<h2 style="font-family:'Playfair Display',serif;color:var(--green);text-align:center;margin-bottom:0">Tùy chọn & Đặt hàng</h2>
+
+<div class="product-customizer-grid">
+    <div class="product-display" id="product-display-container">
+        <div style="font-size:18px; color:var(--muted)">Chọn Màu nền và Họa tiết để xem mẫu</div>
+    </div>
+
+    <div class="custom-options">
+        <div style="font-size:14px; color:var(--muted)">Bandana Họa Tiết Hoa Sen: **₫200.000**</div>
+        
+        <div class="option-group">
+            <h3>Màu nền</h3>
+            <div class="selector-buttons" id="color-selectors">
+                <div class="selector-btn color-option" data-color="1" data-bg-color="#FDE8B4" style="background-color: #FDE8B4;">
+                    <div style="font-size:12px; font-weight:700; color:#5b2b3a">1</div>
+                </div>
+                <div class="selector-btn color-option" data-color="2" data-bg-color="#6f906b" style="background-color: #6f906b;">
+                    <div style="font-size:12px; font-weight:700; color:#fff">2</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option-group">
+            <h3>Họa tiết</h3>
+            <div class="selector-buttons" id="pattern-selectors">
+                <div class="selector-btn" data-pattern="1">Họa tiết 1</div>
+                <div class="selector-btn" data-pattern="2">Họa tiết 2</div>
+                <div class="selector-btn" data-pattern="3">Họa tiết 3</div>
+            </div>
+        </div>
+
+        <div class="option-group">
+            <h3>Số lượng</h3>
+            <div class="quantity-selector">
+                <button class="qty-btn" id="qty-minus">-</button>
+                <input type="text" id="quantity-input" value="1" min="1" readonly>
+                <button class="qty-btn" id="qty-plus">+</button>
+            </div>
+        </div>
+
+        <button class="btn-primary" id="buy-now-btn">MUA (₫200.000)</button>
+        
+        <div id="checkout-form-container">
+            <h4>Xác nhận đơn hàng</h4>
+            <p id="order-summary" style="font-size:14px; color:var(--green); font-weight:600; margin:0 0 10px;"></p>
+            <form id="checkout-form">
+                <input class="checkout-input" type="text" name="name" placeholder="Họ và tên" required>
+                <input class="checkout-input" type="email" name="email" placeholder="Email liên hệ" required>
+                <input class="checkout-input" type="tel" name="phone" placeholder="Số điện thoại" required>
+                <button type="submit" class="btn-primary checkout-btn">HOÀN TẤT ĐẶT HÀNG</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<section id="collections">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<h2 style="font-family:'Playfair Display',serif;color:var(--green);margin:0">Bộ sưu tập</h2>
+<div style="color:var(--muted);font-weight:600">Sản phẩm nổi bật</div>
+</div>
+
+<div class="products-grid">
+<article class="product" role="article">
+<div class="thumb" aria-hidden="true">Họa tiết Sen Truyền Thống</div>
+<h3>Sen Sớm Mai</h3>
+<p>Mô tả ngắn: họa tiết lấy cảm hứng hoa sen truyền thống, đường nét tinh tế.</p>
+<div class="price">₫200.000</div>
+<div class="action">
+<a class="btn-primary" href="#product-customizer">Mua</a>
+<a class="" href="#">Xem chi tiết</a>
+</div>
+</article>
+
+<article class="product">
+<div class="thumb">Sen Hồng Nhẹ</div>
+<h3>Hồng Phấn</h3>
+<p>Mô tả ngắn: gam màu pastel phối cùng họa tiết hiện đại, phù hợp phong cách trẻ trung.</p>
+<div class="price">₫180.000</div>
+<div class="action">
+<a class="btn-primary" href="#product-customizer">Mua</a>
+<a href="#">Xem chi tiết</a>
+</div>
+</article>
+
+<article class="product">
+<div class="thumb">Sen Vàng</div>
+<h3>Vàng Kem</h3>
+<p>Mô tả ngắn: tông ấm, dễ phối đồ, sử dụng chất liệu cotton pha lụa cảm giác mềm mại.</p>
+<div class="price">₫1500.000</div>
+<div class="action">
+<a class="btn-primary" href="#product-customizer">Mua</a>
+<a href="#">Xem chi tiết</a>
+</div>
+</article>
+
+</div>
+</section>
+
+<section id="story">
+<div class="story">
+<div>
+<h2>Câu chuyện thương hiệu</h2>
+<div class="card">
+<p>Thương hiệu của chúng tôi ra đời từ một trăn trở giản dị: làm sao để những giá trị truyền thống của Việt Nam, đặc biệt là hình ảnh hoa sen, có thể đến gần hơn với giới trẻ hôm nay, không chỉ như một biểu tượng văn hóa mà còn như một phần trong đời sống hiện đại.</p>
+
+<p>Trong hành trình tìm hiểu về hoa sen, biểu tượng của sự thanh khiết, bền bỉ và tinh tế trong văn hóa Việt, chúng tôi bất ngờ phát hiện rằng từ chính cuống hoa sen có thể rút ra sợi tơ để dệt thành lụa hoa sen. Tấm lụa ấy mềm mại, bền chắc và hiếm có, mang trong mình tinh thần sáng tạo và sự khéo léo của con người Việt. Khám phá đó khiến chúng tôi nhận ra rằng vẻ đẹp truyền thống không hề tĩnh tại, mà luôn có thể được tái sinh trong những hình thức mới, hiện đại hơn.</p>
+
+<p>Từ cảm hứng đó, ý tưởng về bandana họa tiết hoa sen được hình thành. Bandana là một món phụ kiện năng động, cá tính và linh hoạt, đại diện cho tinh thần tự do của thế hệ trẻ. Khi kết hợp cùng họa tiết hoa sen, nó trở thành cầu nối giữa vẻ đẹp cổ điển và phong cách hiện đại. Mỗi chiếc bandana không chỉ là một món đồ thời trang, mà còn là một mảnh văn hóa Việt được mang theo bên mình.</p>
+
+<p>Mỗi họa tiết hoa sen trên khăn được sáng tạo dựa trên tinh thần truyền thống, kết hợp cùng nét vẽ, màu sắc và bố cục mang hơi thở trẻ trung. Qua từng sản phẩm, chúng tôi gửi gắm một thông điệp: giữ gìn văn hóa không có nghĩa là giữ nguyên hình thức cũ, mà là tìm cách để nó được yêu thêm một lần nữa.</p>
+
+<p>Trong tương lai, chúng tôi mong muốn tiếp tục hợp tác cùng các nghệ nhân địa phương và nhà thiết kế trẻ để lan tỏa giá trị Việt qua những sản phẩm thời trang ứng dụng, gần gũi và bền vững hơn.</p>
+
+<p><em>Với bandana hoa sen, chúng tôi không chỉ tạo ra một sản phẩm, mà còn tạo ra một câu chuyện để bạn mang theo — câu chuyện của Việt Nam, được kể bằng phong cách của chính bạn.</em></p>
+</div>
+</div>
+
+<aside>
+<div class="card">
+<h3 style="margin-top:0">Chi tiết</h3>
+<p><strong>Chất liệu gợi ý:</strong> lụa pha cotton, cotton cao cấp, lụa hoa sen (nếu có)</p>
+<p><strong>Mã màu chủ đạo:</strong></p>
+<ul style="padding-left:18px">
+<li><strong style="color:var(--green)">#6f906b</strong> — Xanh rêu</li>
+<li><strong style="color:var(--pink)">#feb6d2</strong> — Hồng phấn</li>
+<li><strong style="color:var(--cream)">#fde8b4</strong> — Vàng kem</li>
+</ul>
+<p style="font-size:13px;color:#666;margin-bottom:0">Thành viên thành lập: Minh Hà, Khánh Minh, Gia Hân, Khánh Hà, Thùy Trang</p>
+</div>
+</aside>
+</div>
+</section>
+
+<section id="founders">
+<h2 style="font-family:'Playfair Display',serif;color:var(--green);margin-bottom:12px">Nhóm sáng lập</h2>
+<div class="founders">
+<div class="founder">
+<div style="font-size:28px">MH</div>
+<h4>Minh Hà</h4>
+<p>Thiết kế & Họa tiết</p>
+</div>
+<div class="founder">
+<div style="font-size:28px">KM</div>
+<h4>Khánh Minh</h4>
+<p>Chiến lược thương hiệu</p>
+</div>
+<div class="founder">
+<div style="font-size:28px">GH</div>
+<h4>Gia Hân</h4>
+<p>Sản xuất & Hợp tác nghệ nhân</p>
+</div>
+<div class="founder">
+<div style="font-size:28px">KH</div>
+<h4>Khánh Hà</h4>
+<p>Tiếp thị & Nội dung</p>
+</div>
+<div class="founder">
+<div style="font-size:28px">TT</div>
+<h4>Thùy Trang</h4>
+<p>Quản lý vận hành</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+<div style="flex:1;min-width:260px">
+<h2 style="font-family:'Playfair Display',serif;color:var(--green)">Liên hệ & Đặt hàng</h2>
+<p style="margin-top:6px;color:#444">Bạn có thể gửi email, DM trên mạng xã hội, hoặc đăng ký để nhận bộ sưu tập mới.</p>
+
+<form onsubmit="event.preventDefault();alert('Cảm ơn! Chúng tôi sẽ liên hệ lại sớm.');" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+<input aria-label="Tên" placeholder="Họ và tên" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid rgba(111,144,107,0.12)" required>
+<input aria-label="Email" placeholder="Email" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid rgba(111,144,107,0.12)" required>
+<button class="btn-primary" type="submit">Gửi</button>
+</form>
+</div>
+
+<div style="min-width:220px;padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(254,182,210,0.06), rgba(253,232,180,0.06))">
+<h4 style="margin:0 0 8px">Mua sỉ & Hợp tác</h4>
+<p style="margin:0;color:#666">Liên hệ email: hello@lienbandana.vn</p>
+<p style="margin:6px 0 0;color:#666">Instagram: @lien_bandana</p>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="foot-grid container">
+<div>
+<div style="font-weight:700;color:var(--green)">Liên</div>
+<div style="color:#666">Bandana họa tiết hoa sen • Sản phẩm thủ công</div>
+</div>
+<div class="social">
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">TikTok</a>
+</div>
+</div>
+</footer>
+</main>
+
+<script>
+// Dữ liệu cho các tùy chọn sản phẩm
+const PRODUCT_DATA = {
+    color: {
+        '1': { name: 'Vàng Kem', hex: '#FDE8B4' },
+        '2': { name: 'Xanh Rêu', hex: '#6f906b' },
+    },
+    pattern: {
+        '1': { name: 'Hoa Sen Thanh Khiết', url: 'https://placehold.co/400x400/FDE8B4/6f906b?text=HOA+TIET+1' }, // Thay bằng URL công khai HT1
+        '2': { name: 'Hoa Sen Hiện Đại', url: 'https://placehold.co/400x400/6f906b/FDE8B4?text=HOA+TIET+2' }, // Thay bằng URL công khai HT2
+        '3': { name: 'Hoa Sen Tinh Tế', url: 'https://placehold.co/400x400/feb6d2/5b2b3a?text=HOA+TIET+3' }  // Thay bằng URL công khai HT3
+    }
+};
+
+// Các phần tử DOM
+const colorSelectors = document.getElementById('color-selectors');
+const patternSelectors = document.getElementById('pattern-selectors');
+const productDisplayContainer = document.getElementById('product-display-container');
+const quantityInput = document.getElementById('quantity-input');
+const qtyMinusBtn = document.getElementById('qty-minus');
+const qtyPlusBtn = document.getElementById('qty-plus');
+const buyNowBtn = document.getElementById('buy-now-btn');
+const checkoutFormContainer = document.getElementById('checkout-form-container');
+const checkoutForm = document.getElementById('checkout-form');
+const orderSummaryElement = document.getElementById('order-summary');
+
+// Biến lưu trạng thái lựa chọn
+let selectedColor = null;
+let selectedPattern = null;
+const productPrice = 200000;
+
+// --- Chức năng Hiển thị Ảnh Mẫu ---
+function updateProductDisplay() {
+    // 1. Cập nhật màu nền
+    const selectedColorData = PRODUCT_DATA.color[selectedColor];
+    if (selectedColorData) {
+        productDisplayContainer.style.backgroundColor = selectedColorData.hex;
+    } else {
+        // Mặc định
+        productDisplayContainer.style.backgroundColor = 'var(--cream)';
+    }
+
+    // 2. Cập nhật hình ảnh họa tiết
+    const selectedPatternData = PRODUCT_DATA.pattern[selectedPattern];
+    productDisplayContainer.innerHTML = ''; // Xóa nội dung cũ
+
+    if (selectedPatternData && selectedColorData) {
+        // Tạo thẻ ảnh
+        const img = document.createElement('img');
+        img.src = selectedPatternData.url;
+        img.alt = `Bandana ${selectedColorData.name} với họa tiết ${selectedPatternData.name}`;
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.style.borderRadius = 'var(--radius)';
+        img.style.boxShadow = '0 0 20px rgba(0,0,0,0.1)';
+
+        // Thêm ảnh vào container
+        productDisplayContainer.appendChild(img);
+
+    } else {
+        // Thông báo nếu chưa chọn đủ
+        const message = document.createElement('div');
+        message.style.fontSize = '18px';
+        message.style.color = 'var(--muted)';
+        message.innerText = 'Chọn Màu nền và Họa tiết để xem mẫu';
+        productDisplayContainer.appendChild(message);
+    }
+}
+
+// --- Xử lý Lựa chọn Màu nền và Họa tiết ---
+function handleSelection(event, type) {
+    const target = event.target.closest('.selector-btn');
+    if (!target) return;
+
+    // Bỏ active của tất cả nút cùng nhóm
+    document.querySelectorAll(`#${type}-selectors .selector-btn`).forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    // Thêm active cho nút được chọn
+    target.classList.add('active');
+
+    // Lưu lựa chọn
+    if (type === 'color') {
+        selectedColor = target.dataset.color;
+    } else if (type === 'pattern') {
+        selectedPattern = target.dataset.pattern;
+    }
+
+    // Cập nhật hiển thị mẫu
+    updateProductDisplay();
+    // Ẩn form checkout nếu đang hiển thị
+    checkoutFormContainer.style.display = 'none';
+    buyNowBtn.innerText = `MUA (${formatCurrency(quantityInput.value * productPrice)})`;
+}
+
+colorSelectors.addEventListener('click', (e) => handleSelection(e, 'color'));
+patternSelectors.addEventListener('click', (e) => handleSelection(e, 'pattern'));
+
+// --- Xử lý Số lượng ---
+function formatCurrency(number) {
+    return '₫' + number.toLocaleString('vi-VN');
+}
+
+function updateQuantity(delta) {
+    let currentQty = parseInt(quantityInput.value);
+    let newQty = currentQty + delta;
+    if (newQty < 1) newQty = 1; // Số lượng tối thiểu là 1
+    quantityInput.value = newQty;
+    buyNowBtn.innerText = `MUA (${formatCurrency(newQty * productPrice)})`;
+    
+    // Ẩn form checkout nếu đang hiển thị
+    checkoutFormContainer.style.display = 'none';
+}
+
+qtyMinusBtn.addEventListener('click', () => updateQuantity(-1));
+qtyPlusBtn.addEventListener('click', () => updateQuantity(1));
+
+// --- Xử lý Nút MUA (Buy Now) ---
+buyNowBtn.addEventListener('click', () => {
+    if (!selectedColor || !selectedPattern) {
+        alert("Vui lòng chọn Màu nền và Họa tiết trước khi mua hàng.");
+        return;
+    }
+
+    const qty = parseInt(quantityInput.value);
+    const total = qty * productPrice;
+    
+    const colorName = PRODUCT_DATA.color[selectedColor].name;
+    const patternName = PRODUCT_DATA.pattern[selectedPattern].name;
+
+    orderSummaryElement.innerHTML = `
+        Sản phẩm: **Bandana ${colorName} - ${patternName}**<br>
+        Số lượng: **${qty}** | Tổng tiền: **${formatCurrency(total)}**
+    `;
+
+    // Cuộn tới form và hiển thị
+    checkoutFormContainer.style.display = 'block';
+    checkoutFormContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// --- Xử lý Form Checkout ---
+checkoutForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const phone = e.target.phone.value;
+    const qty = quantityInput.value;
+    const total = formatCurrency(qty * productPrice);
+
+    alert(`
+        ĐẶT HÀNG THÀNH CÔNG!
+        
+        Sản phẩm: Bandana ${PRODUCT_DATA.color[selectedColor].name} - ${PRODUCT_DATA.pattern[selectedPattern].name}
+        Số lượng: ${qty} | Tổng tiền: ${total}
+
+        Thông tin liên hệ:
+        Tên: ${name}
+        Email: ${email}
+        SĐT: ${phone}
+
+        Chúng tôi sẽ liên hệ lại qua email/số điện thoại để xác nhận đơn hàng sớm nhất. Cảm ơn bạn đã tin tưởng Liên!
+    `);
+    
+    // Reset form và ẩn
+    checkoutForm.reset();
+    checkoutFormContainer.style.display = 'none';
+});
+
+// Simple: smooth scroll for anchors
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+a.addEventListener('click', e=>{
+const href = a.getAttribute('href');
+if(href.length>1){
+const t = document.querySelector(href);
+if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+}
+})
+});
+
+// Khởi tạo trạng thái ban đầu
+document.addEventListener('DOMContentLoaded', () => {
+    updateProductDisplay();
+});
+</script>
+</body>
+</html>
